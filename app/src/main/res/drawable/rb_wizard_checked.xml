@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2015 Sony Mobile Communications Inc.
+  All rights, including trade secret rights, reserved.
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="oval">
+    <solid android:color="@color/colorEnabled"/>
+    <size
+        android:width="@dimen/rb_wizard_size"
+        android:height="@dimen/rb_wizard_size"/>
+</shape>

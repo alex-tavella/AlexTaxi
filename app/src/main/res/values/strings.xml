@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Alex Taxi</string>
+
+    <!--Wizard-->
+    <string name="title_activity_start">Welcome</string>
+    <string name="welcome_text">Welcome to Alex Taxi!</string>
+    <string name="welcome_detail_text">An application that will assist you in getting to wherever you need to be!</string>
+    <string name="cost_effective_text">Cost Effective!</string>
+    <string name="cost_effective_detail_text">Our drivers are equipped with GPS devices so that you can reach your destination through the best possible path.</string>
+    <string name="sustainability_text">Sustainability</string>
+    <string name="sustainability_detail_text">One of our goals is to improve urban mobility through efficiency! For that, our drivers are encouraged to use sustainable fuel!</string>
+    <string name="btn_start_text">Start</string>
+    <string name="registration_detail">To begin using our application, we just need your name.</string>
+
+    <!--Error Handling-->
+    <string name="dialog_title_unexpected_error">Unexpected error</string>
+    <string name="dialog_content_unexpected_error">An unexpected error has occurred, please try again.</string>
+    <string name="dialog_content_location_address_error">Error when trying to obtain selected location address, please try again.</string>
+    <string name="dialog_content_ride_request_error">Error requesting ride, please try again.</string>
+
+    <!--Ride-->
+    <string name="dialog_title_submit_ride_request">Request ride</string>
+    <string name="dialog_content_submit_ride_request">Are you sure you want a ride at the specified location - %1$s?</string>
+
+    <!--Navigation-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_legal_information">Legal Information</string>
+    <string name="menu_about">About</string>
+</resources>

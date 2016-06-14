@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="wizard_radio_group_ids">
+        <item>@id/rb_wizard_1</item>
+        <item>@id/rb_wizard_2</item>
+        <item>@id/rb_wizard_3</item>
+        <item>@id/rb_wizard_4</item>
+    </array>
+
+    <array name="wizard_title_text_ids">
+        <item>@string/welcome_text</item>
+        <item>@string/cost_effective_text</item>
+        <item>@string/sustainability_text</item>
+    </array>
+
+    <array name="wizard_detail_text_ids">
+        <item>@string/welcome_detail_text</item>
+        <item>@string/cost_effective_detail_text</item>
+        <item>@string/sustainability_detail_text</item>
+    </array>
+
+    <array name="wizard_icon_ids">
+        <item>@drawable/ic_taxi</item>
+        <item>@drawable/ic_money</item>
+        <item>@drawable/ic_sustainability</item>
+    </array>
+</resources>

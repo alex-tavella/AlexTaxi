@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_profile" />
+        <item
+            android:id="@+id/nav_legal_information"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_legal_information"/>
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_about"/>
+    </group>
+
+    <item android:title="Actions">
+        <menu>
+            <item
+                android:id="@+id/nav_order_taxi"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Order Taxi" />
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,12 +1,9 @@
-package br.com.alex.taxi.androidapp
+package br.com.alex.taxi.androidapp.welcome
 
 import android.support.test.rule.ActivityTestRule
 import android.support.test.runner.AndroidJUnit4
 import android.test.suitebuilder.annotation.LargeTest
-import org.junit.After
-import org.junit.Before
-import org.junit.Rule
-import org.junit.Test
+import org.junit.*
 import org.junit.runner.RunWith
 
 /**
@@ -14,21 +11,23 @@ import org.junit.runner.RunWith
  */
 @RunWith(AndroidJUnit4::class)
 @LargeTest
-class LauncherActivityTests {
+class WelcomeActivityTests {
 
     @Rule @JvmField
-    var activityRule = ActivityTestRule<LauncherActivity>(LauncherActivity::class.java, false, false)
-
+    var activityRule = ActivityTestRule<WelcomeActivity>(WelcomeActivity::class.java, false, false)
 
     @Before
     fun setup() {
+
     }
 
     @Test
     fun testSomething() {
+        Assert.assertTrue(true)
     }
 
     @After
     fun release() {
+
     }
 }

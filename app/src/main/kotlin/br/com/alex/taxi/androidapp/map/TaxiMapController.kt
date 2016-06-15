@@ -162,6 +162,7 @@ class TaxiMapController(val context: Context) : GoogleApiClient.ConnectionCallba
                             newLastLocationsRequest(it.southwest.toLocationString(),
                             it.northeast.toLocationString())
                 }
+                .map { it.filter { it.available } }
                 .doOnError { Log.w(TAG, "Error when fetching taxis location - ${it?.message}") }
                 .onErrorResumeNext { Observable.empty() }
                 .observeOn(AndroidSchedulers.mainThread())
@@ -175,14 +176,10 @@ class TaxiMapController(val context: Context) : GoogleApiClient.ConnectionCallba
     }
 
     private fun placeTaxis(taxis: List<Taxi>) {
-        val availableTaxiBD = BitmapDescriptorFactory.fromResource(R.mipmap.marker_taxi_available)
-        val unavailableTaxiBD = BitmapDescriptorFactory.fromResource(R.mipmap.marker_taxi_unavailable)
+        val taxiBD = BitmapDescriptorFactory.fromResource(R.drawable.marker_taxi)
         clearTaxis()
         mCurrentTaxis.addAll(taxis
-                .map {
-                    MarkerOptions().position(LatLng(it.lat, it.lng))
-                            .icon(if (it.available) availableTaxiBD else unavailableTaxiBD)
-                }
+                .map { MarkerOptions().position(LatLng(it.lat, it.lng)).icon(taxiBD) }
                 .map { mMap?.addMarker(it)!! })
     }
 

@@ -2,10 +2,7 @@ package br.com.alex.taxi.api
 
 import br.com.alex.taxi.api.error.RideException
 import br.com.alex.taxi.api.error.RideNotFoundException
-import br.com.alex.taxi.api.error.UserInvalidException
-import br.com.alex.taxi.api.error.UserNotFoundException
 import br.com.alex.taxi.model.Ride
-import br.com.alex.taxi.model.User
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.After

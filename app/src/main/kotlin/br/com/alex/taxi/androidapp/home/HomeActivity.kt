@@ -17,15 +17,16 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import br.com.alex.taxi.androidapp.R
+import br.com.alex.taxi.androidapp.commons.OnUserRegisteredListener
 import br.com.alex.taxi.androidapp.commons.view.AlertDialogFragment
 import br.com.alex.taxi.androidapp.commons.view.displayErrorMessage
 import br.com.alex.taxi.androidapp.home.navigation.AboutFragment
 import br.com.alex.taxi.androidapp.home.navigation.HomeFragment
-import br.com.alex.taxi.androidapp.home.navigation.LegalInformationFragment
 import br.com.alex.taxi.androidapp.home.navigation.ProfileFragment
 import br.com.alex.taxi.androidapp.map.TaxiMapController
 import br.com.alex.taxi.androidapp.userprofile.UserProfileProvider
 import br.com.alex.taxi.api.RequestFactory
+import br.com.alex.taxi.model.User
 import com.google.android.gms.maps.GoogleMap
 import rx.Observable
 import rx.android.schedulers.AndroidSchedulers
@@ -35,7 +36,7 @@ import java.io.IOException
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener,
         HomeFragment.OnMapListener, AlertDialogFragment.OnSubmitListener,
-        HomeFragment.OnOrderTaxiFabClickListener {
+        HomeFragment.OnOrderTaxiFabClickListener, OnUserRegisteredListener {
 
     companion object {
         val EXTRA_CURRENT_CONTENT = "current_content"
@@ -92,6 +93,10 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         { Log.d(localClassName, "Error when fetching user profile - ${it?.message}") }))
     }
 
+    override fun onUserRegistered(user: User) {
+        mNameTextView.text = user.name
+    }
+
     override fun onStop() {
         mSubscriptions.clear()
         displayProgress(false)
@@ -118,9 +123,6 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.nav_profile -> {
                 switchContentView(ProfileFragment())
-            }
-            R.id.nav_legal_information -> {
-                switchContentView(LegalInformationFragment())
             }
             R.id.nav_about -> {
                 switchContentView(AboutFragment())

@@ -26,7 +26,16 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="menu_home">Home</string>
-    <string name="menu_profile">Profile</string>
+    <string name="menu_profile">Edit Profile</string>
     <string name="menu_legal_information">Legal Information</string>
     <string name="menu_about">About</string>
+    <string name="nav_menu_title_actions">Actions</string>
+    <string name="menu_request_ride">Order Taxi</string>
+    <string name="menu_exit">Logout</string>
+
+
+    <!--Profile-->
+    <string name="toast_user_updated_successfully">User has been updated successfully</string>
+    <string name="hint_edit_username">Name, e.g. Alex Almeida</string>
+    <string name="submit">Submit</string>
 </resources>

@@ -2,7 +2,6 @@ package br.com.alex.taxi.api
 
 import br.com.alex.taxi.api.error.RideExceptionMapper
 import br.com.alex.taxi.api.error.UserExceptionMapper
-import br.com.alex.taxi.api.error.UserInvalidException
 import br.com.alex.taxi.model.Ride
 import br.com.alex.taxi.model.Taxi
 import br.com.alex.taxi.model.User

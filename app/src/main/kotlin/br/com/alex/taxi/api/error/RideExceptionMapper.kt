@@ -1,7 +1,6 @@
 package br.com.alex.taxi.api.error
 
 import br.com.alex.taxi.model.Ride
-import br.com.alex.taxi.model.User
 import retrofit2.Response
 import retrofit2.adapter.rxjava.HttpException
 import rx.Observable

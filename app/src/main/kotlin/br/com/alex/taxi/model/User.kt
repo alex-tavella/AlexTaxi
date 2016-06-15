@@ -10,9 +10,8 @@ import com.google.gson.annotations.SerializedName
 data class User(@SerializedName("id") val id: Long,
                 @SerializedName("name") var name: String): Parcelable {
 
-    constructor(`in`: Parcel): this(`in`.readLong(), `in`.readString())
-
     companion object {
+
         @JvmField
         val CREATOR = object : Parcelable.Creator<User> {
             override fun createFromParcel(`in`: Parcel): User {
@@ -25,6 +24,8 @@ data class User(@SerializedName("id") val id: Long,
         }
     }
 
+    constructor(`in`: Parcel): this(`in`.readLong(), `in`.readString())
+
     override fun writeToParcel(`out`: Parcel?, flags: Int) {
         `out`?.writeLong(id)
         `out`?.writeString(name)
@@ -32,4 +33,7 @@ data class User(@SerializedName("id") val id: Long,
 
     override fun describeContents() = 0
 
+    fun isValid(): Boolean {
+        return !name.isNullOrBlank()
+    }
 }

@@ -1,7 +1,6 @@
 package br.com.alex.taxi.androidapp
 
 import android.os.StrictMode
-import android.support.multidex.MultiDex
 import android.support.multidex.MultiDexApplication
 import com.squareup.leakcanary.LeakCanary
 
@@ -28,7 +27,6 @@ class AlexTaxiApplication: MultiDexApplication() {
         }
 
         super.onCreate()
-        MultiDex.install(this)
         LeakCanary.install(this)
     }
 }

@@ -83,7 +83,3 @@ class RegistrationFragment : Fragment(), TextWatcher {
         }
     }
 }
-
-private fun User.isValid(): Boolean {
-    return !name.isNullOrBlank()
-}

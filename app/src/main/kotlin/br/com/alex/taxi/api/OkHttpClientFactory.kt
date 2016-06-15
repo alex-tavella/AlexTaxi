@@ -12,7 +12,8 @@ internal class OkHttpClientFactory {
         val singletonInstance: OkHttpClient by lazy { val okHttpClientBuilder = OkHttpClient.Builder()
 
             if (BuildConfig.DEBUG) {
-                okHttpClientBuilder.addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.HEADERS))
+                okHttpClientBuilder.addInterceptor(HttpLoggingInterceptor()
+                        .setLevel(HttpLoggingInterceptor.Level.HEADERS))
             }
 
             okHttpClientBuilder.build()
